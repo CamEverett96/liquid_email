@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liquid</title>
+    <style type="text/css">
+        /* CLIENT SPECIFIC STYLES */
+        body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+        table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+        img { -ms-interpolation-mode: bicubic; }
+  
+        /* RESET STYLES */
+        img { border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; }
+        table { border-collapse: collapse !important; }
+        body { height: 100% !important; Margin: 0 !important; padding: 0 !important; width: 100% !important; }
+  
+        /* IOS BLUE LINKS */
+        a[x-apple-data-detectors] {
+           color: inherit !important;
+           text-decoration: none !important;
+           font-size: inherit !important;
+           font-family: inherit !important;
+           font-weight: inherit !important;
+           line-height: inherit !important;
+        }
+  
+        /* GMAIL BLUE LINKS */
+        u + #body a {
+           color: inherit;
+           text-decoration: none;
+           font-size: inherit;
+           font-family: inherit;
+           font-weight: inherit;
+           line-height: inherit;
+        }
+  
+        @media only screen and (max-width: 600px) {
+           .responsive-table {
+              width: 480px !important;
+           }
+  
+           .image {
+              width: 100% !important;
+              height: auto !important;
+           }
+  
+           .db {
+              display: block !important;
+              text-align: center !important;
+           }
+  
+           .dw {
+              width: 100% !important;
+              min-width: 100% !important;
+              max-width: 100% !important;
+           }
+        }
+  
+        @media only screen and (max-width: 480px) {
+           .responsive-table {
+              width: 95% !important;
+           }
+        }
+     </style>
+</head>
+<body>
+    <script type="text/template">
+         <!-- START OF PREVIEW TEXT -->
+   <div style="display: none; max-height: 0; overflow: hidden;">
+    Your Lucky Brand Order #12345678 Has Been Shipped...
+ </div>
+ <div style="display: none; max-height: 0; overflow: hidden;">
+    
+&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌
+
+ </div>
+ <!-- END OF PREVIEW TEXT -->
+
+ <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+    <tbody><tr>
+       <td style="padding: 30px 0px;" align="center">
+          <!-- START OF HTML EMAIL (600PX WIDE) -->
+          <table role="presentation" style="background-color: #FFFFFF;" class="responsive-table" width="600" cellspacing="0" cellpadding="0" border="0" align="center">
+             <!-- START OF HEADER LOGO -->
+             <tbody><tr>
+                <td style="padding-top: 20px;" align="center">
+                   <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+                      <tbody><tr>
+                         <td align="center">
+                            <a href="https://www.luckybrand.com/" target="_blank">
+                               <img src="assets/lb-logo.jpeg" alt="Lucky Brand Logo" style="display: block; border: none;" width="240">
+                            </a>
+                         </td>
+                      </tr>
+                   </tbody></table>
+                </td>
+             </tr>
+             <!-- END OF HEADER LOGO -->
+
+             <!-- START OF SHIPPING CONFIRMATION -->
+             <tr>
+                <td style="padding: 25px 0px;" align="center">
+                   <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+                      <tbody><tr>
+                         <td style="color: #1B1715; font-family: Arial, Helvetica, sans-serif; font-size: 11px; font-weight: normal; line-height: 22px; text-transform: uppercase; letter-spacing: 2px; padding: 15px 0px;" bgcolor="#F5F4ED" align="center">
+                            <h2 style="Margin: 0;">
+                               Shipping Confirmation
+                            </h2>
+                         </td>
+                      </tr>
+                   </tbody></table>
+                </td>
+             </tr>
+             <!-- END OF SHIPPING CONFIRMATION -->
+
+             <!-- START OF YOUR ORDER IS ON THE WAY -->
+             <tr>
+                <td align="center">
+                   <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+                      <tbody><tr>
+                         <td style="color: #1B1715; font-family: Arial, Helvetica, sans-serif; font-size: 16px; font-weight: bold; line-height: 1.3; text-transform: uppercase;" align="center">
+                            <h1 style="Margin: 0;">
+                               Your order <br> 
+                               is on the way!
+                            </h1>
+                         </td>
+                      </tr>
+                   </tbody></table>
+                </td>
+             </tr>
+             <!-- END OF YOUR ORDER IS ON THE WAY -->
+
+             <!-- START OF ORDER NUMBER -->
+             <tr>
+                <td style="padding-top: 15px;" align="center">
+                   <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+                      <tbody><tr>
+                         <td style="color: #1B1715; font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: normal; line-height: 20px;" align="center">
+                            <p style="Margin: 0;">
+                               Order number #{{order.id}} has shipped! <br>
+                               See below for package tracking information.
+                            </p>
+                         </td>
+                      </tr>
+                   </tbody></table>
+                </td>
+             </tr>
+             <!-- END OF ORDER NUMBER -->
+
+             <!-- START OF TRACK PACKAGE BUTTON -->
+             <tr>
+                <td style="padding-top: 20px;" align="center">
+                   <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+                      <tbody><tr>
+                         <td align="center">
+                            <a href="{{order.tracking_url}}" target="_blank" style="font-size: 14px; font-family: Arial, Helvetica, sans-serif; color: #FFFFFF; text-decoration: none; border-radius: 0px; -webkit-border-radius: 0px; background-color: #000000; border-top: 10px solid #000000; border-bottom: 10px solid #000000; border-right: 30px solid #000000; border-left: 30px solid #000000; display: inline-block; text-transform: uppercase;">Track Package</a>
+                         </td>
+                      </tr>
+                   </tbody></table>
+                </td>
+             </tr>
+             <!-- END OF TRACK PACKAGE BUTTON -->
+
+             <!-- START OF ORDER SUMMARY TITLE -->
+             <tr>
+                <td style="padding-top: 30px;" align="center">
+                   <table role="presentation" width="90%" cellspacing="0" cellpadding="0" border="0" align="center">
+                      <tbody><tr>
+                         <td style="color: #1B1715; font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: normal; line-height: 22px; text-transform: uppercase; letter-spacing: 2px;" align="center">
+                            <h2 style="Margin: 0;">
+                               Order Summary
+                            </h2>
+                         </td>
+                      </tr>
+
+                      <tr>
+                         <td style="padding-top: 10px;">
+                            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+                               <tbody><tr>
+                                  <td style="background-color: #000000;" height="2"></td>
+                               </tr>
+                            </tbody></table>
+                         </td>
+                      </tr>
+                   </tbody></table>
+                </td>
+             </tr>
+             <!-- END OF ORDER SUMMARY TITLE -->
+
+             <!-- START OF ORDER SUMMARY DETAILS -->
+             <tr>
+                <td style="padding-top: 10px;" align="center">
+                   <table class="responsive-table" role="presentation" width="540" cellspacing="0" cellpadding="0" border="0" align="center">
+                      <tbody><tr>
+                         <td class="dw db" width="260">
+                            <table role="presentation" width="90%" cellspacing="0" cellpadding="0" border="0" align="center">
+                               <tbody><tr>
+                                  <td class="dw db" align="left">
+                                     <h2 style="Margin: 0; color: #1B1715; font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: bold; line-height: 28px; text-transform: uppercase; letter-spacing: 2px;">
+                                        Shipping Address
+                                     </h2>
+                                  </td>
+                               </tr>
+
+                               <tr>
+                                  <td class="dw db" align="left">
+                                     <p style="Margin: 0; color: #1B1715; font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: normal; line-height: 22px; text-transform: uppercase;">
+                                        {{customer.customer_first_name}}  {{customer.customer_last_name}}
+                                     </p>
+
+                                     <p style="Margin: 0; color: #1B1715; font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: normal; line-height: 22px;">
+                                        {{customer.street}} <br>
+                                        {{customer.city}},  {{customer.state}}  {{customer.zipcode}}<br>
+                                        {{customer.country}}
+                                     </p>
+                                  </td>
+                               </tr>
+                            </tbody></table>
+                         </td>
+
+                         <td class="dw db" width="20" height="20">
+                            &nbsp;
+                         </td>
+
+                         <td class="dw db" width="260">
+                            <table role="presentation" width="90%" cellspacing="0" cellpadding="0" border="0" align="center">
+                               <tbody><tr>
+                                  <td class="dw db" align="right">
+                                     <h2 style="Margin: 0; color: #1B1715; font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: bold; line-height: 28px; text-transform: uppercase; letter-spacing: 2px;">
+                                        Billing Address
+                                     </h2>
+                                  </td>
+                               </tr>
+
+                               <tr>
+                                  <td class="dw db" align="right">
+                                     <p style="Margin: 0; color: #1B1715; font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: normal; line-height: 22px; text-transform: uppercase;">
+                                        {{customer.customer_first_name}}  {{customer.customer_last_name}}
+                                     </p>
+
+                                     <p style="Margin: 0; color: #1B1715; font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: normal; line-height: 22px;">
+                                        {{order.billing_street}}
+                                         <br>
+                                         {{order.billing_city}}, {{order.billing_state}} {{order.billing_zipcode}}
+                                        <br>
+                                        {{order.billing_country}}
+                                    
+                                       
+                                     </p>
+                                  </td>
+                               </tr>
+                            </tbody></table>
+                         </td>
+                      </tr>
+                   </tbody></table>
+                </td>
+             </tr>
+             <!-- END OF ORDER SUMMARY DETAILS -->
+
+             <!-- START OF PAYMENT INFORMATION -->
+             <tr>
+                <td style="padding-top: 20px;" align="center">
+                   <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+                      <tbody><tr>
+                         <td align="center">
+                            <h2 style="Margin: 0; color: #1B1715; font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: bold; line-height: 28px; text-transform: uppercase; letter-spacing: 2px;">
+                               Payment Method
+                            </h2>
+
+                            <p style="Margin: 0; color: #1B1715; font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: normal; line-height: 22px; padding-top: 5px;">
+                             {{order.payment_type}}
+                            </p>
+                         </td>
+                      </tr>
+                   </tbody></table>
+                </td>
+             </tr>
+             <!-- END OF PAYMENT INFORMATION -->
+
+             <!-- START OF YOUR ITEMS TITLE -->
+             <tr>
+                <td style="padding-top: 30px;" align="center">
+                   <table role="presentation" width="90%" cellspacing="0" cellpadding="0" border="0" align="center">
+                      <tbody><tr>
+                         <td style="color: #1B1715; font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: normal; line-height: 22px; text-transform: uppercase; letter-spacing: 2px;" align="center">
+                            <h2 style="Margin: 0;">
+                               Your Items
+                            </h2>
+                         </td>
+                      </tr>
+
+                      <tr>
+                         <td style="padding-top: 10px;">
+                            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+                               <tbody><tr>
+                                  <td style="background-color: #000000;" height="2"></td>
+                               </tr>
+                            </tbody></table>
+                         </td>
+                      </tr>
+                   </tbody></table>
+                </td>
+             </tr>
+             <!-- END OF YOUR ITEMS TITLE -->
+
+             <!-- START OF YOUR ITEMS DETAILS -->
+             <tr>
+                <td style="padding-top: 10px;" align="center">
+                   <table class="responsive-table" role="presentation" width="540" cellspacing="0" cellpadding="0" border="0" align="center">
+                      <tbody><tr>
+                         <td class="dw db" width="130">
+                            <table role="presentation" width="130" cellspacing="0" cellpadding="0" border="0" align="center">
+                               <tbody><tr>
+                                  <td class="dw db" align="left">
+                                     <img class="image" src="assets/flannel-shirt.jpeg" alt="Flannel Shirt" style="display: block; border: none;" width="130">
+                                  </td>
+                               </tr>
+                            </tbody></table>
+                         </td>
+
+                         <td class="dw db" width="20" height="20">
+                            &nbsp;
+                         </td>
+
+                         <td class="dw db" width="390" valign="top">
+                            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+                               <tbody><tr>
+                                  <td class="dw db" align="left">
+                                     <h2 style="Margin: 0; color: #1B1715; font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: bold; line-height: 28px; text-transform: uppercase; letter-spacing: 2px;">
+                                        Plaid Workwear Cloud Flannel
+                                     </h2>
+                                  </td>
+                               </tr>
+
+                               <tr>
+                                  <td class="dw db" align="left">
+                                     <p style="Margin: 0; color: #1B1715; font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: normal; line-height: 22px;">
+                                        Item #: 123456789123 <br>
+                                        Style: 1A123456 <br>
+                                        Color: BLACK / NATURAL COMBO <br>
+                                        Quantity: 1
+                                     </p>
+
+                                     <p style="Margin: 0; color: #1B1715; font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: normal; line-height: 22px; padding-top: 10px;">
+                                        Price: $55.65
+                                     </p>
+                                  </td>
+                               </tr>
+                            </tbody></table>
+                         </td>
+                      </tr>
+                   </tbody></table>
+                </td>
+             </tr>
+             <!-- END OF YOUR ITEMS DETAILS -->
+
+             <!-- START OF BORDER -->
+             <tr>
+                <td style="padding-top: 10px;">
+                   <table role="presentation" width="90%" cellspacing="0" cellpadding="0" border="0" align="center">
+                      <tbody><tr>
+                         <td style="background-color: #000000;" height="2"></td>
+                      </tr>
+                   </tbody></table>
+                </td>
+             </tr>
+             <!-- END OF BORDER -->
+
+             <!-- START OF TRANSACTION COST -->
+             <tr>
+                <td style="padding-top: 10px;" align="center">
+                   <table role="presentation" width="90%" cellspacing="0" cellpadding="0" border="0" align="center">
+                      <tbody><tr>
+                         <td width="70%" align="left">
+                            <p style="Margin: 0; color: #1B1715; font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: normal; line-height: 22px; padding-top: 10px; padding-left: 10px;">
+                               Subtotal
+                            </p>
+                         </td>
+
+                         <td width="30%" align="right">
+                            <p style="Margin: 0; color: #1B1715; font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: normal; line-height: 22px; padding-top: 10px; padding-right: 10px;">
+                            ${{order.subtotal}}
+                            </p>
+                         </td>
+                      </tr>
+
+                      <tr>
+                         <td width="70%" align="left">
+                            <p style="Margin: 0; color: #1B1715; font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: normal; line-height: 22px; padding-top: 10px; padding-left: 10px; text-transform: capitalize;">
+                               Shipping Standard
+                            </p>
+                         </td>
+
+                         <td width="30%" align="right">
+                            <p style="Margin: 0; color: #1B1715; font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: normal; line-height: 22px; padding-top: 10px; padding-right: 10px;">
+                               ${{order.shipping_price}}
+                            </p>
+                         </td>
+                      </tr>
+
+                      <tr>
+                         <td width="70%" align="left">
+                            <p style="Margin: 0; color: #1B1715; font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: normal; line-height: 22px; padding-top: 10px; padding-left: 10px; text-transform: capitalize;">
+                               Sales Tax
+                            </p>
+                         </td>
+
+                         <td width="30%" align="right">
+                            <p style="Margin: 0; color: #1B1715; font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: normal; line-height: 22px; padding-top: 10px; padding-right: 10px;">
+                             ${{order.sales_tax}}
+                            </p>
+                         </td>
+                      </tr>
+                   </tbody></table>
+                </td>
+             </tr>
+             <!-- END OF TRANSACTION COST -->
+
+             <!-- START OF BORDER -->
+             <tr>
+                <td style="padding-top: 20px;">
+                   <table role="presentation" width="90%" cellspacing="0" cellpadding="0" border="0" align="center">
+                      <tbody><tr>
+                         <td style="background-color: #000000;" height="2"></td>
+                      </tr>
+                   </tbody></table>
+                </td>
+             </tr>
+             <!-- END OF BORDER -->
+
+             <!-- START OF TOTAL COST -->
+             <tr>
+                <td style="padding-top: 10px;" align="center">
+                   <table role="presentation" width="90%" cellspacing="0" cellpadding="0" border="0" align="center">
+                      <tbody><tr>
+                         <td width="70%" align="left">
+                            <p style="Margin: 0; color: #1B1715; font-family: Arial, Helvetica, sans-serif; font-size: 18px; font-weight: bold; line-height: 1; text-transform: uppercase; padding-top: 10px; padding-left: 10px;">
+                               Total
+                            </p>
+                         </td>
+
+                         <td width="30%" align="right">
+                            <p style="Margin: 0; color: #1B1715; font-family: Arial, Helvetica, sans-serif; font-size: 18px; font-weight: bold; line-height: 1; padding-top: 10px; padding-right: 10px;">
+                               ${{order.total}}
+                            </p>
+                         </td>
+                      </tr>
+                   </tbody></table>
+                </td>
+             </tr>
+             <!-- END OF TOTAL COST -->
+
+             <!-- START OF THANK YOU -->
+             <tr>
+                <td style="padding-top: 30px;" align="center">
+                   <table role="presentation" width="90%" cellspacing="0" cellpadding="0" border="0" align="center">
+                      <tbody><tr>
+                         <td style="color: #FFFFFF; font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: normal; line-height: 22px; text-transform: uppercase; letter-spacing: 2px;" bgcolor="#000000" align="center">
+                            <h2 style="Margin: 0; padding: 20px 0px;">
+                               Thank You For Shopping With Us!
+                            </h2>
+                         </td>
+                      </tr>
+                   </tbody></table>
+                </td>
+             </tr>
+             <!-- END OF THANK YOU -->
+
+             <!-- START OF EMAIL WAS SENT TO -->
+             <tr>
+                <td style="padding-top: 20px;" align="center">
+                   <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+                      <tbody><tr>
+                         <td style="color: #1B1715; font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-weight: normal; line-height: 20px;" align="center">
+                            <p style="Margin: 0;">
+                               This email was sent to {{customer.email}}
+                            </p>
+                         </td>
+                      </tr>
+                   </tbody></table>
+                </td>
+             </tr>
+             <!-- END OF EMAIL WAS SENT TO -->
+
+             <!-- START OF CONTACT US -->
+             <tr>
+                <td style="padding-top: 10px;" align="center">
+                   <table role="presentation" width="90%" cellspacing="0" cellpadding="0" border="0" align="center">
+                      <tbody><tr>
+                         <td style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-weight: normal; line-height: 20px;" width="50" align="right">
+                            <a style="color: #1B1715;" href="{{company.contact_us}}" target="_blank">
+                               Contact Us
+                            </a>
+                         </td>
+
+                         <td width="5" height="20">
+                            &nbsp;
+                         </td>
+
+                         <td style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-weight: normal; line-height: 20px;" width="50" align="left">
+                            <a style="color: #1B1715;" href="{{company.privacy_page}}" target="_blank">
+                               Privacy Policy 
+                            </a>
+                         </td>
+                      </tr>
+                   </tbody></table>
+                </td>
+             </tr>
+             <!-- END OF CONTACT US -->
+
+             <!-- START OF ADDRESS -->
+             <tr>
+                <td style="padding: 15px 0px 20px 0px;" align="center">
+                   <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+                      <tbody><tr>
+                         <td style="color: #1B1715; font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-weight: normal; line-height: 20px;" align="center">
+                            <p style="Margin: 0;">
+                               {{company.name}} | {{company.street}} | {{company.city}}, {{company.state}} {{company.street2}} | {{company.country}}
+                            </p>
+                         </td>
+                      </tr>
+                   </tbody></table>
+                </td>
+             </tr>
+             <!-- END OF ADDRESS -->
+          </tbody></table>
+          <!-- END OF HTML EMAIL (600PX WIDE) -->
+       </td>
+    </tr>
+ </tbody></table>
+    </script>
+    <div id="result"></div>
+    <!-- for dev -->
+  
+    <script src="https://cdn.jsdelivr.net/npm/liquidjs/dist/liquid.browser.umd.js"></script>
+    <script>
+        const template = document.querySelector('[type="text/template"]')
+        const result = document.querySelector('#result')
+        const engine = new liquidjs.Liquid()
+
+        engine 
+            .parseAndRender(template.innerHTML, {
+                customer: {
+                    id:4354657678,
+                    customer_first_name:"Jane",
+                    customer_last_name:"Doe",
+                    email:"janedoe555@gmail.com",
+                    street: "555 Melrose Rd",
+                    street2: "suite 555",
+                    city: "Los Angelos",
+                    state: "CA",
+                    country: "US",
+                    zipcode:"09374",
+
+                },
+                company: { 
+                    name: "Lucky Jeans LLC",
+                    street: "23 hollywood blvd",
+                    street2: "suite 434",
+                    city: "Los Angelos",
+                    state: "CA",
+                    country: "US",
+                    zipcode:"09374",
+                    contact_us:"https://www.nike.com/help/?utm_source=transactional&utm_medium=email&utm_campaign=tracking_package#contact",
+                    privacy_page:"https://agreementservice.svs.nike.com/rest/agreement?agreementType=privacyPolicy&uxId=com.nike.commerce.nikedotcom.web&country=US&language=en&requestType=redirect"
+                },
+                order: {
+                    id:4354657678,
+                    tracking_url:"https://luckybrand.com/",
+                    shipping_street: "5151 Highland Rd.",
+                    shipping_city: "Baton Rouge",
+                    shipping_state: "Louisiana",
+                    shipping_country: "US",
+                    shipping_zipcode:"70808",
+                    billing_street: "5151 Highland Rd.",
+                    billing_city: "Baton Rouge",
+                    billing_state: "LA",
+                    billing_country: "US",
+                    billing_zipcode:"70808",
+                    payment_type:"Paypal",
+                    items_total:3,
+                    items_title:"Black Summer Shirt, Red and Black V-neck, Blue and White button down",
+                    items_page:"https://www.luckybrand.com/jacquard-trucker-jacket/7M31004.html#uuid=d424beb8ab0ae01f1dbc8047a9, https://www.luckybrand.com/americana-pinup-tee/7M85469.html#uuid=70adb306afadcd4d68e0765672, https://www.luckybrand.com/aces-over-eights-tee/7MDG0228.html#uuid=3bd0975bd1f7a145136fb02be8",
+                    items_images:"https://localhost:5500/assets/flannel-shirt.jpeg. https://i1.adis.ws/i/lucky/7M31004_240_2/JACQUARD-TRUCKER-JACKET-240?sm=aspect&aspect=2:3&w=893&qlt=100,https://i1.adis.ws/i/lucky/7M85469_460_3/AMERICANA-PINUP-TEE-460?sm=aspect&aspect=2:3&w=893&qlt=100,  https://i1.adis.ws/i/lucky/7MDG0228_001_1/ACES-OVE…EIGHTS-TEE-001?sm=aspect&aspect=2:3&w=893&qlt=100,",
+                    items_ids:"245435353,345353453,345657476",
+                    items_colors:"BLACK / NATURAL COMBO, RED / BLACK COMBO,BLLUE ,/ WHITE COMBO",
+                    items_colors:"1a123456, 1A12367, 1A123459",
+                    item_quantities: "1,2,1",
+                    item_prices:"55.99, 99.99, 32.99",
+                    total:"214.88",
+                    subtotal:"188.97",
+                    shipping_price:"10.00",
+                    sales_tax:"15.91",
+            
+                }
+
+            })
+            .then(html => result.innerHTML = html)
+    </script>
+
+</body>
+</html>
